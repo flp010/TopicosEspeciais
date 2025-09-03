@@ -7,21 +7,21 @@ export default function App() {
     const [quantidade, setQuantidade] = useState("")
 
     const adicionarCompra = () => {
-        if (compra.trim() === "" || compra != Number) {
-            alert("Dados inseridos não pode ser um número ou espaço em branco")
-            return
+        if (compra.trim() === "" || !isNaN(Number(compra))) {
+            alert("Dados inseridos não pode ser um número ou espaço em branco");
+            return;
         }
-
+    
         if (quantidade.trim() === "" || isNaN(Number(quantidade)) || Number(quantidade) <= 0) {
-            alert("Quantidade deve ser um número maior que 0")
-            return
+            alert("Quantidade deve ser um número maior que 0");
+            return;
         }
-
+    
         const nova = {
             id: Date.now().toString(),
             titulo: compra,
             quantidade: Number(quantidade)
-        }
+        };
 
         setCompras([...compras, nova])
         setCompra("")
@@ -144,6 +144,7 @@ const styles = StyleSheet.create({
         borderRadius: 6,
         justifyContent: "center",
         alignItems: "center",
-        padding: 12
+        padding: 12,
+        marginBottom: 30
     }
 })
