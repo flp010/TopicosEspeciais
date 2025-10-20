@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
   } // Fecha o build
 } // Fecha a classe
 
+
 class ContadorPage extends StatefulWidget {
   const ContadorPage({super.key});
 

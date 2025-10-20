@@ -55,7 +55,6 @@ class _ListaComprasPageState extends State<ListaComprasPage> {
     });
   }
 
-  
   String getEmojiProduto(String produto) {
     if (produto.toLowerCase().contains("pão")) return "🥖";
     if (produto.toLowerCase().contains("suco")) return "🧃";
